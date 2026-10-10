@@ -1,0 +1,92 @@
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+  --background: #f3efe6;
+  --surface: #fbf8f3;
+  --ink: #1a1814;
+  --ink-hover: #2e2a24;
+  --muted: #5f584f;
+  --line: #e3dcd0;
+  --track: #e6dfd3;
+  --shadow: 0 1px 2px rgb(26 24 20 / 0.06);
+  --food: #a34b2a;
+  --training: #2c5f73;
+  --body: #6e5344;
+  --recovery: #3d6b58;
+  --good: #1e6b3c;
+  --warning: #8a5b00;
+  --over: #9d2c2c;
+  --focus: #1a1814;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --background: #141311;
+  --surface: #1e1c19;
+  --ink: #f4f0e8;
+  --ink-hover: #fffaf3;
+  --muted: #b7aea3;
+  --line: #3a342c;
+  --track: #2c2924;
+  --shadow: 0 12px 28px rgb(0 0 0 / 0.28);
+  --food: #e39a78;
+  --training: #8ebfd4;
+  --body: #d4b89a;
+  --recovery: #9dccb4;
+  --good: #8ed0a4;
+  --warning: #e6c27a;
+  --over: #f0aaa4;
+  --focus: #f4f0e8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    color-scheme: dark;
+    --background: #141311;
+    --surface: #1e1c19;
+    --ink: #f4f0e8;
+    --ink-hover: #fffaf3;
+    --muted: #b7aea3;
+    --line: #3a342c;
+    --track: #2c2924;
+    --shadow: 0 12px 28px rgb(0 0 0 / 0.28);
+    --food: #e39a78;
+    --training: #8ebfd4;
+    --body: #d4b89a;
+    --recovery: #9dccb4;
+    --good: #8ed0a4;
+    --warning: #e6c27a;
+    --over: #f0aaa4;
+    --focus: #f4f0e8;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-ink-hover: var(--ink-hover);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-track: var(--track);
+  --color-food: var(--food);
+  --color-training: var(--training);
+  --color-body: var(--body);
+  --color-recovery: var(--recovery);
+  --color-good: var(--good);
+  --color-warning: var(--warning);
+  --color-over: var(--over);
+  --color-focus: var(--focus);
+  --font-sans: var(--font-source-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display:
+    var(--font-barlow-condensed), ui-sans-serif, system-ui, sans-serif;
+  --radius-control: 10px;
+  --radius-card: 14px;
+  --shadow-card: var(--shadow);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progress-ring__value {
+    transition: none;
+  }
+}

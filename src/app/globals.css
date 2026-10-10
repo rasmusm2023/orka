@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@import "../../design/tokens.css";
+
+body {
+  background: var(--background);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+.progress-ring__value {
+  transition: stroke-dashoffset 400ms ease;
+}
